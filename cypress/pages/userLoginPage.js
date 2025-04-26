@@ -1,4 +1,4 @@
-class userLogin {
+class userLoginPage {
 
     visit(){
         cy.visit('/')
@@ -12,4 +12,4 @@ class userLogin {
 
 }
 
-export default new userLogin();
+export default new userLoginPage();

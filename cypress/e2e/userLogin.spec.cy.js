@@ -1,4 +1,4 @@
-import userLogin from '../pages/userLogin'
+import userLogin from '../pages/userLoginPage'
 
 describe ('User do login on aplication', () => {
 
