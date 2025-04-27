@@ -1,13 +1,13 @@
 import userLogin from '../pages/userLoginPage'
 
-describe ('User do login on aplication', () => {
+describe ('User logs into the applicationin on aplication', () => {
 
-    it('user must be registered on aplication', () => {
+    it('user must be registered on application', () => {
 
         userLogin.visit();
         userLogin.acessTheLoginPage({
             email: 'murilomag.galindo@gmail.com',
-            senha: '123456'
+            senha: 'user@1234'
         })
 
     });

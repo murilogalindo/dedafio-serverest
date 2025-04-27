@@ -9,7 +9,7 @@ describe('Create User Registration on Serverest platform', () => {
         userRegistrationPage.fillFormToRegister({
             nome: 'Murilo Teste',
             email: 'murilomag.galindo@gmail.com',
-            senha: '123456'
+            senha: 'user@1234'
     });
     });
 

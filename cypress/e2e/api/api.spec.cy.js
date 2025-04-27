@@ -1,8 +1,8 @@
-// Testes de API
- const userId = '9ybxoPayT4TIxmet';
- // Gerar nome aleatório
+// API Test
+ const userId = 'rmQcmrcJPgXTSQYA';
+ // Generate random name
  const nomeAleatorio = 'Desafioapi' + Math.random().toString(36).substring(7);
-  // Gerar email aleatório
+  // Generage random email
   const emailAleatorio = nomeAleatorio + '@example.com';  // Ex: User_xh7t92v@example.com
 
 describe('List all usrers', () => {
@@ -17,20 +17,20 @@ describe('List all usrers', () => {
         })
     })
 })
-describe('List user buy id', () => {
+describe('List user by id', () => {
     it('Must be return status 200 and a user refer to id', () => {
        
         cy.request('GET', `https://serverest.dev/usuarios/${userId}`)
         
         .should((response) => {
             expect(response.status).to.eq(200);
-            expect(response.body).to.have.property('nome');  // Verifica se o corpo da resposta tem a propriedade 'nome'
-            expect(response.body).to.have.property('email');  // Verifica se o corpo da resposta tem a propriedade 'email'
-            expect(response.body).to.have.property('_id').and.to.eq(userId);  // Verifica se o ID do usuário é o mesmo fornecido
+            expect(response.body).to.have.property('nome');  // Checks if the response body has the 'name' property
+            expect(response.body).to.have.property('email');  // Checks if the response body has the 'email' property
+            expect(response.body).to.have.property('_id').and.to.eq(userId);  // Checks if the user ID is the same as the one provided
         })
     })
 })
-describe('API - Crete User', () => {
+describe('API - Create User', () => {
     it('Must be created a user and status should be 201', () => {
         const newUser = {
             nome: nomeAleatorio,
