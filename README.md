@@ -117,6 +117,6 @@ You can open the generated .html file to view the detailed graphical test result
 
 Developed by Murilo Galindo 🚀
 
-    LinkedIn
+    LinkedIn: https://www.linkedin.com/in/murilogalindo/
 
-    GitHub
+    GitHub: https://github.com/murilogalindo
