@@ -1,54 +1,54 @@
-Cypress Automation Project - Serverest
+Project: Cypress Automation - Serverest
 
-This project performs automated tests on the Serverest platform using Cypress with the Page Object Model, integrated with Mochawesome for report generation, following best automation practices.
+This project performs automated tests on the Serverest platform using Cypress with the Page Object Model pattern, integration with Mochawesome for reports, and following good automation practices.
 🚀 Technologies Used
 
-    Cypress — E2E Test Automation Framework
+    Cypress — E2E Testing Framework
 
-    Mochawesome — Generating test reports in HTML and JSON
+    Mochawesome — Test Reports in HTML and JSON
 
-    JavaScript — Test scripting language
+    JavaScript — Test Programming Language
 
-    Node.js — Execution environment
+    Node.js — Execution Environment
 
-    Page Object Model — Test organization pattern
+    Page Object Model — Test Organization Pattern
 
 📂 Folder Structure
 
 cypress/
 ├── e2e/
 │   ├── api/
-│   │   └── api.spec.cy.js          # API Tests
-│   ├── listProduct.spec.cy.js      # Product listing test
-│   ├── productRegistration.spec.cy.js # Product registration test
-│   ├── userLogin.spec.cy.js        # User login test
-│   ├── userRegistration.spec.cy.js # User registration test
+│   │   └── api.spec.cy.js               # API Tests
+│   ├── listProduct.spec.cy.js            # Product listing test
+│   ├── productRegistration.spec.cy.js    # Product registration test
+│   ├── userLogin.spec.cy.js               # User login test
+│   ├── userRegistration.spec.cy.js        # User registration test
 ├── pages/
-│   ├── listProductPage.js          # Page Object - List Products
-│   ├── productRegistrationPage.js  # Page Object - Register Product
-│   ├── userLoginPage.js             # Page Object - User Login
-│   ├── userRegistrationPage.js      # Page Object - User Registration
+│   ├── listProductPage.js                # Page Object - List Products
+│   ├── productRegistrationPage.js        # Page Object - Register Product
+│   ├── userLoginPage.js                   # Page Object - User Login
+│   ├── userRegistrationPage.js            # Page Object - User Registration
 ├── fixtures/
-│   └── produto-laptop.png          # Image for upload
-└── reports/                        # Generated reports
+│   └── produto-laptop.png                # Image for upload
+└── reports/                               # Generated Reports
 
-📥 How to Install
+⚙️ Installation
 
     Clone the repository:
 
 git clone git@github.com:murilogalindo/dedafio-serverest.git
 
-    Navigate into the project directory:
+Navigate to the project folder:
 
 cd dedafio-serverest
 
-    Install the dependencies:
+Install the dependencies:
 
-npm install
+    npm install
 
-⚙️ Configuration
+🛠 Settings
 
-The project is already configured in the cypress.config.js file:
+The project is already configured inside cypress.config.js:
 
 import { defineConfig } from "cypress";
 
@@ -70,24 +70,24 @@ export default defineConfig({
   }
 });
 
-🧪 How to Run the Tests
+▶️ How to Run the Tests
 
     To open Cypress in interactive mode:
 
 npx cypress open
 
-    To run all tests in headless mode and generate the report:
+To run all tests in headless mode and generate the report:
 
-npx cypress run
+    npx cypress run
 
-📈 Report Generation
+📊 Report Generation
 
-After running npx cypress run, reports will be generated in:
+After running npx cypress run, test reports are generated inside:
 
 cypress/reports/
 
-You can open the generated .html file to view the graphical test report.
-✅ Features Tested
+You can open the .html file inside that folder to view the detailed graphical report of the test executions.
+✅ Tested Features
 
     New user registration
 
@@ -97,21 +97,20 @@ You can open the generated .html file to view the graphical test report.
 
     Product listing and search
 
-    Serverest API tests
+    API testing on Serverest platform
 
-Future Improvements
+🔮 Future Improvements
 
-    Continuous Integration (CI/CD) with GitHub Actions and Jenkins
+    Integrate CI/CD pipelines (GitHub Actions or Jenkins)
 
-    Increase test coverage
+    Add more negative test scenarios
 
-    Implement performance tests
+    Implement API mocking for faster testing
 
 👨‍💻 Author
 
-Developed by Murilo 🚀
+Developed by Murilo Galindo 🚀
 
     LinkedIn
 
     GitHub
-
