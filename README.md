@@ -105,13 +105,9 @@ You can open the generated .html file to view the detailed graphical test result
 
 🔮 Future Improvements
 
-    Continuous Integration (CI/CD) with GitHub Actions or Jenkins
-
-    API Mocking
+    Continuous Integration (CI/CD) with GitHub Actions and Jenkins
 
     Expand negative test scenarios
-
-    Performance testing
 
 👨‍💻 Author
 
