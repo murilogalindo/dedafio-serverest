@@ -2,6 +2,7 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
+  projectId: 's51sqp',
   chromeWebSecurity: false,
   e2e: {
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',  // Define o padrão para localizar os testes

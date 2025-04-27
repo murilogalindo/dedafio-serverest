@@ -1,4 +1,5 @@
 import userRegistrationPage from '../pages/userRegistrationPage'
+const numero =  Math.random().toString(36).substring(7);
 
 describe('Create User Registration on Serverest platform', () => {
 
@@ -7,10 +8,14 @@ describe('Create User Registration on Serverest platform', () => {
         userRegistrationPage.visit();
         userRegistrationPage.clickToRegister();
         userRegistrationPage.fillFormToRegister({
-            nome: 'Murilo Teste',
-            email: 'murilomag.galindo@gmail.com',
+            nome: 'Murilo Teste', numero,
+            email: `murilomag${numero}@gmail.com`,  
             senha: 'user@1234'
+
+            
     });
+    cy.contains('Cadastro realizado com sucesso') // Procurar o texto na tela
+    .should('be.visible'); // Garantir que ele está visível
     });
 
 });

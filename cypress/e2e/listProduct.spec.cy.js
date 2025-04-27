@@ -1,5 +1,4 @@
 import listProductPage from "../pages/listProductPage"
-import userLogin from '../pages/userLoginPage'
 
 describe('List product on the application', () => {
 
@@ -8,7 +7,7 @@ describe('List product on the application', () => {
       });
     it('must be list a product by id', () => {
 
-        listProductPage.getProductByName('Laptop Lenovo X4pejzi')
+        listProductPage.getProductByName('Laptop Lenovo Xsl3x3l')
             .should('be.visible');
 
      
