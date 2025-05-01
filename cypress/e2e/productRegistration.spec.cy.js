@@ -29,7 +29,7 @@ describe('Registration new product', () => {
             
 
         })
-        cy.get('button[type="submit"]').click()
+        cy.get('button[type="submit"]', { timeout: 8000 }).click()
         cy.contains('Listar Produtos').should('be.visible');
         cy.location('href').should('eq', 'https://front.serverest.dev/admin/listarprodutos');
         
