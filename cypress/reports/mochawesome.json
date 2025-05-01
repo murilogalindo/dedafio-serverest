@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-01T23:06:07.919Z",
+    "end": "2025-05-01T23:06:16.125Z",
+    "duration": 8206,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8f007c2e-31c1-4b12-9103-14e1752c8110",
+      "title": "",
+      "fullFile": "cypress/e2e/listProduct.spec.cy.js",
+      "file": "cypress/e2e/listProduct.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9b22c73e-210b-4437-ab29-ff6280d80461",
+          "title": "List product on the application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "must be list a product by id",
+              "fullTitle": "List product on the application must be list a product by id",
+              "timedOut": null,
+              "duration": 8147,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_listProductPage.default.getProductByName('Laptop Lenovo Xsl3x3l').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `table tbody tr`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `table tbody tr`, but never found it.\n    at listProductPage.getProductByName (webpack://desafio-nttdata/./cypress/pages/listProductPage.js:8:18)\n    at Context.eval (webpack://desafio-nttdata/./cypress/e2e/listProduct.spec.cy.js:10:24)",
+                "diff": null
+              },
+              "uuid": "bf078dc5-96fe-476b-9d5a-fb8034e0de85",
+              "parentUUID": "9b22c73e-210b-4437-ab29-ff6280d80461",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bf078dc5-96fe-476b-9d5a-fb8034e0de85"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8147,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

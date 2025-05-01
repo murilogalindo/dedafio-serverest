@@ -7,7 +7,7 @@ describe('List product on the application', () => {
       });
     it('must be list a product by id', () => {
 
-        listProductPage.getProductByName('Laptop Lenovo Xsl3x3l')
+        listProductPage.getProductByName('Pumpkin Ice Cream')
             .should('be.visible');
 
      

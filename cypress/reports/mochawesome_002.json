@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-01T23:06:30.872Z",
+    "end": "2025-05-01T23:06:47.520Z",
+    "duration": 16648,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2ae1dc58-93bf-47a1-bb06-a16faab4b45f",
+      "title": "",
+      "fullFile": "cypress/e2e/userLogin.spec.cy.js",
+      "file": "cypress/e2e/userLogin.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "51319a32-10cc-4f52-841b-3507a7ddd400",
+          "title": "User logs into the applicationin on aplication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "user try to access with invalid email",
+              "fullTitle": "User logs into the applicationin on aplication user try to access with invalid email",
+              "timedOut": null,
+              "duration": 2686,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert: Access login page with an invalid email \n_userLoginPage.default.acessTheLoginPage({\n  email: 'murilomag@gmail',\n  senha: 'user@1234'\n});\n// Assert: Check invalid email message is visible\ncy.contains('Email deve ser um email válido').should('be.visible');",
+              "err": {},
+              "uuid": "a38f8dbe-a9ac-47df-98c6-28127722cce9",
+              "parentUUID": "51319a32-10cc-4f52-841b-3507a7ddd400",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "user try to access with invalid password",
+              "fullTitle": "User logs into the applicationin on aplication user try to access with invalid password",
+              "timedOut": null,
+              "duration": 1930,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert: Check invalid password\n_userLoginPage.default.acessTheLoginPage({\n  email: 'murilomag.galindo@gmail.com',\n  senha: '1515@1234'\n});\n// Assert: Check invalid password messa erros is visible\ncy.contains('Email e/ou senha inválidos').should('be.visible');",
+              "err": {},
+              "uuid": "affd10c0-b08e-42fd-a553-31ddaefce245",
+              "parentUUID": "51319a32-10cc-4f52-841b-3507a7ddd400",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "user must be registered on application",
+              "fullTitle": "User logs into the applicationin on aplication user must be registered on application",
+              "timedOut": null,
+              "duration": 11943,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_userLoginPage.default.acessTheLoginPage({\n  email: 'murilomag.galindo@gmail.com',\n  senha: 'user@1234'\n});\ncy.contains('Bem Vindo Murilo Teste', {\n  timeout: 10000\n}).should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Bem Vindo Murilo Teste' but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Bem Vindo Murilo Teste' but never did.\n    at Context.eval (webpack://desafio-nttdata/./cypress/e2e/userLogin.spec.cy.js:43:5)",
+                "diff": null
+              },
+              "uuid": "783d3eda-9465-438f-88cd-703e6dee9442",
+              "parentUUID": "51319a32-10cc-4f52-841b-3507a7ddd400",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a38f8dbe-a9ac-47df-98c6-28127722cce9",
+            "affd10c0-b08e-42fd-a553-31ddaefce245"
+          ],
+          "failures": [
+            "783d3eda-9465-438f-88cd-703e6dee9442"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16559,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

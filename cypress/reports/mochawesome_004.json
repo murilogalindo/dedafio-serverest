@@ -1,0 +1,206 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-01T23:06:56.694Z",
+    "end": "2025-05-01T23:06:58.349Z",
+    "duration": 1655,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "721fef59-2252-4898-9f4e-90c7aa20f13a",
+      "title": "",
+      "fullFile": "cypress/e2e/api/api.spec.cy.js",
+      "file": "cypress/e2e/api/api.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "066f6271-8302-40fc-b75e-5e46dc9c3cef",
+          "title": "List all usrers",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Must be return status 200 and list all users",
+              "fullTitle": "List all usrers Must be return status 200 and list all users",
+              "timedOut": null,
+              "duration": 703,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', 'https://serverest.dev/usuarios?administrador=true').should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.be.an('object');\n  expect(response.body).to.have.property('usuarios').and.to.be.an('array');\n  expect(response.body.usuarios).to.have.length.greaterThan(0);\n  console.log(response.body);\n});",
+              "err": {},
+              "uuid": "aafff057-b05a-4223-ab4b-967310fee2de",
+              "parentUUID": "066f6271-8302-40fc-b75e-5e46dc9c3cef",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aafff057-b05a-4223-ab4b-967310fee2de"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 703,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "090d6644-2876-4c2b-a478-e6a6b2b70fef",
+          "title": "List user by id",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Must be return status 200 and a user refer to id",
+              "fullTitle": "List user by id Must be return status 200 and a user refer to id",
+              "timedOut": null,
+              "duration": 333,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', `https://serverest.dev/usuarios/${userId}`).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('nome'); // Checks if the response body has the 'name' property\n  expect(response.body).to.have.property('email'); // Checks if the response body has the 'email' property\n  expect(response.body).to.have.property('_id').and.to.eq(userId); // Checks if the user ID is the same as the one provided\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://serverest.dev/usuarios/rmQcmrcJPgXTSQYA\n\nThe response we received from your web server was:\n\n  > 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://serverest.dev/usuarios/rmQcmrcJPgXTSQYA\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/134.0.0.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \"access-control-allow-origin\": \"*\",\n  \"x-dns-prefetch-control\": \"off\",\n  \"x-frame-options\": \"SAMEORIGIN\",\n  \"strict-transport-security\": \"max-age=15552000; includeSubDomains\",\n  \"x-download-options\": \"noopen\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"x-cloud-trace-context\": \"629d0fc08518b44282411ca4439103bf\",\n  \"date\": \"Thu, 01 May 2025 23:06:57 GMT\",\n  \"server\": \"Google Frontend\",\n  \"content-length\": \"45\"\n}\nBody: {\n  \"message\": \"Usuário não encontrado\"\n}\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://serverest.dev/usuarios/rmQcmrcJPgXTSQYA\n\nThe response we received from your web server was:\n\n  > 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://serverest.dev/usuarios/rmQcmrcJPgXTSQYA\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/134.0.0.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \"access-control-allow-origin\": \"*\",\n  \"x-dns-prefetch-control\": \"off\",\n  \"x-frame-options\": \"SAMEORIGIN\",\n  \"strict-transport-security\": \"max-age=15552000; includeSubDomains\",\n  \"x-download-options\": \"noopen\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"x-cloud-trace-context\": \"629d0fc08518b44282411ca4439103bf\",\n  \"date\": \"Thu, 01 May 2025 23:06:57 GMT\",\n  \"server\": \"Google Frontend\",\n  \"content-length\": \"45\"\n}\nBody: {\n  \"message\": \"Usuário não encontrado\"\n}\n\n\nhttps://on.cypress.io/request\n    at <unknown> (https://front.serverest.dev/__cypress/runner/cypress_runner.js:134979:72)\n    at tryCatcher (https://front.serverest.dev/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://front.serverest.dev/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://front.serverest.dev/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://front.serverest.dev/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://front.serverest.dev/__cypress/runner/cypress_runner.js:1671:18)\n    at _drainQueueStep (https://front.serverest.dev/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://front.serverest.dev/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://front.serverest.dev/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://front.serverest.dev/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://desafio-nttdata/./cypress/e2e/api/api.spec.cy.js:24:11)",
+                "diff": null
+              },
+              "uuid": "12576d98-20d9-40be-ba08-823c88805824",
+              "parentUUID": "090d6644-2876-4c2b-a478-e6a6b2b70fef",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "12576d98-20d9-40be-ba08-823c88805824"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 333,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "ab90e503-af8f-402d-b9b1-6b38571e4aa1",
+          "title": "API - Create User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create user with invalid email status shoud be 400",
+              "fullTitle": "API - Create User Create user with invalid email status shoud be 400",
+              "timedOut": null,
+              "duration": 268,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newUser = {\n  nome: nomeAleatorio,\n  email: invalidEmail,\n  password: \"teste\",\n  administrador: \"true\"\n};\ncy.request({\n  method: 'POST',\n  url: 'https://serverest.dev/usuarios',\n  // Verify the correctly andpoint on swagger\n  body: newUser,\n  // User to be created\n  headers: {\n    'Content-Type': 'application/json' // Define content\n  },\n  failOnStatusCode: false\n}).should(response => {\n  expect(response.status).to.eq(400); // Status HTTP esperado (Criado)\n  console.log(expect(response.body).to.have.property('email', 'email deve ser um email válido'));\n  //expect(response.body).to.have.property('_id');\n});",
+              "err": {},
+              "uuid": "c902648b-8589-46fc-bdfb-c0854c6b5632",
+              "parentUUID": "ab90e503-af8f-402d-b9b1-6b38571e4aa1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Must be created a user and status should be 201",
+              "fullTitle": "API - Create User Must be created a user and status should be 201",
+              "timedOut": null,
+              "duration": 257,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newUser = {\n  nome: nomeAleatorio,\n  email: emailAleatorio,\n  password: \"teste\",\n  administrador: \"true\"\n};\ncy.request({\n  method: 'POST',\n  url: 'https://serverest.dev/usuarios',\n  // Verify the correctly andpoint on swagger\n  body: newUser,\n  // User to be created\n  headers: {\n    'Content-Type': 'application/json' // Define content\n  }\n}).should(response => {\n  expect(response.status).to.eq(201); // Status HTTP esperado (Criado)\n  expect(response.body).to.have.property('message', 'Cadastro realizado com sucesso');\n  expect(response.body).to.have.property('_id');\n});",
+              "err": {},
+              "uuid": "9c6d0574-13ce-4bd0-928a-abc719f23cf0",
+              "parentUUID": "ab90e503-af8f-402d-b9b1-6b38571e4aa1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c902648b-8589-46fc-bdfb-c0854c6b5632",
+            "9c6d0574-13ce-4bd0-928a-abc719f23cf0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 525,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

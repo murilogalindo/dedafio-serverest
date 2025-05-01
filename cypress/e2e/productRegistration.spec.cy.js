@@ -14,7 +14,7 @@ describe('Registration new product', () => {
     it('Must be possible create a new product on application', () => {
        
         userLogin.acessTheLoginPage({
-            email: 'murilomag.galindo@gmail.com',
+            email: 'murilomagfa0t9s@gmail.com',
             senha: 'user@1234'
                        
         })
@@ -26,8 +26,10 @@ describe('Registration new product', () => {
             descricao: 'Microsoft Novo laptop Surface (7ª edição) - Windows 11 Home Copilot + PC - Tela LCD PixelSense de 13,8 polegadas - Qualcomm Snapdragon X Elite (12 núcleos) - RAM de 32 GB - SSD de 1 TB - Grafite - ',
             quantidade: numeroQuantidade,
             imagem: 'cypress/fixtures/produto-laptop.png'
+            
 
         })
+        cy.get('button[type="submit"]').click()
         cy.contains('Listar Produtos').should('be.visible');
         cy.location('href').should('eq', 'https://front.serverest.dev/admin/listarprodutos');
         

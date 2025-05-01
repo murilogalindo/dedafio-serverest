@@ -24,7 +24,7 @@ describe ('User logs into the applicationin on aplication', () => {
       
         // Assert: Check invalid password
         userLogin.acessTheLoginPage({
-            email: 'murilomag.galindo@gmail.com', 
+            email: 'murilomagfa0t9s@gmail.com', 
             senha: '1515@1234'
         });
     
@@ -36,7 +36,7 @@ describe ('User logs into the applicationin on aplication', () => {
 
    
     userLogin.acessTheLoginPage({
-        email: 'murilomag.galindo@gmail.com',
+        email: 'murilomagfa0t9s@gmail.com',
         senha: 'user@1234'
     })
     cy.contains('Bem Vindo Murilo Teste', { timeout: 10000 }) 
