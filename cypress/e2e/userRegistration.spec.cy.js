@@ -1,4 +1,3 @@
-import { isEmptyStatement } from 'typescript';
 import userRegistrationPage from '../pages/userRegistrationPage'
 const numero =  Math.random().toString(36).substring(7);
 
